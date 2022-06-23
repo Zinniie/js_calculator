@@ -6,11 +6,11 @@ let operations={
 }
 function calculator(){
     let operand1= Number(prompt("Enter a Number"))
-    let operation = prompt("What Operations Would You Like To Perform [+,-,/,*]")
+    let operation = prompt("What Operation Would You Like To Perform [+,-,/,*]")
     let operand2= Number(prompt("Enter a Number"))
     let result=0
     if (isNaN(operand1) || isNaN(operand2)) {
-        throw   new Error("Alphabets  Not allowed Only Number")
+        throw new Error("Alphabets Not allowed Only Numbers")
     }
     
     else{
@@ -33,7 +33,7 @@ function calculator(){
         }
 
     }      
-    alert(`${result}Your operation: ${operations[operation]}\n The Result is ${result.toFixed(2)}`)
+    alert(`Your operation: ${operations[operation]}\n The Result is ${result.toFixed(2)}`)
 }
 try{
   calculator()
